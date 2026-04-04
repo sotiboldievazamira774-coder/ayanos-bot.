@@ -1,5 +1,8 @@
-import telebot
+from dotenv import load_dotenv
+import telebot 
 import os
+
+load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 OWNER_ID = 5221838264
