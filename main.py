@@ -1,10 +1,12 @@
-from dotenv import load_dotenv
-import telebot 
+import telebot
 import os
 
-load_dotenv()
-
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+if not BOT_TOKEN:
+    print("❌ Ошибка: токен не найден!")
+    exit()
+
 OWNER_ID = 5221838264
 
 bot = telebot.TeleBot(BOT_TOKEN)
@@ -24,4 +26,5 @@ def ping(message):
 def handle(message):
     bot.send_message(message.chat.id, f"🧠 {message.text}")
 
+print("✅ Бот запущен...")
 bot.infinity_polling()
