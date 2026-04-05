@@ -1,1 +1,1 @@
-# ayanos-bot.
+# ayanos-bot
